@@ -18,8 +18,8 @@ function Navbar() {
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src="/logo.png" alt="" />
-          <span>LamaEstate</span>
+          {/* <img src="/logo.png" alt="" /> */}
+          <span>Project Direct</span>
         </a>
         <a href="/">Home</a>
         <a href="/">About</a>
