@@ -4,6 +4,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
+    "dev": "console-ninja node --env-file .env --watch app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
