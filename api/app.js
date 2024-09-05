@@ -17,7 +17,7 @@ app.use(cookieParser());
 //   })
 // );
 
-const allowedOrigins = [process.env.CLIENT_URL, 'https://propertydirect.netlify.app'];
+const allowedOrigins = ['https://propertydirect.netlify.app', process.env.CLIENT_URL];
 
 app.use(cors({
   origin: function (origin, callback) {
