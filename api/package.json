@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "console-ninja node --env-file .env --watch app.js",
-    "build": "prisma generate",
+    "build": "npx prisma generate",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
