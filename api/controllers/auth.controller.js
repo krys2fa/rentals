@@ -4,11 +4,9 @@ import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
   const { username, email, password } = req.body;
-  console.log(req.body);
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    console.log(hashedPassword);
 
     const newUser = await prisma.user.create({
       data: {
@@ -41,11 +39,9 @@ export const login = async (req, res) => {
 
         if (!isPasswordValid) return res.status(401).json({message: "Invalid Credentials!"});
 
-        // res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
-
-
-        
         const age = 1000 * 60 * 60 * 24 * 7;
+
+        const { password: userPassword, ...userInfo } = user;
 
         const token = jwt.sign ({
             id: user.id
@@ -57,7 +53,7 @@ export const login = async (req, res) => {
             httpOnly: true,
             // secure: true,
             maxAge: age,
-        }).status(200).json({message: "Login successful!"});
+        }).status(200).json(userInfo);
         
     } catch (error) {
         console.log(error);
