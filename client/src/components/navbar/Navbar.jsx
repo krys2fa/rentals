@@ -24,8 +24,8 @@ function Navbar() {
         <a href="/">Home</a>
         {/* <a href="/">About</a> */}
         <Link to="/list">Properties</Link>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="#">Contact</a>
+        <a href="#">Agents</a>
       </div>
       <div className="right">
         {currentUser ? (
@@ -56,8 +56,8 @@ function Navbar() {
           <a href="/">Home</a>
           {/* <a href="/">About</a> */}
           <Link to="/list">Properties</Link>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
+          <a href="#">Contact</a>
+          <a href="#">Agents</a>
           <a href="/">Sign in</a>
           <a href="/">Sign up</a>
         </div>
